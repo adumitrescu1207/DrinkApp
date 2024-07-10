@@ -1,0 +1,62 @@
+/* src/styles/AddDrink.css */
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffe6f2;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ff66b2;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #da69a5;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffb3d9;
+    font-size: 16px;
+    background-color: #fff0f5;
+    color: #333;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff1a75;
+  }
+  
+  .error {
+    color: #ff1a75;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
