@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/AddDrink.css'; // Ensure the path is correct
+import '../styles/AddDrink.css';
+import Header from '../Header';
+import Footer from '../Footer';
 
 const AddDrink = () => {
   const [name, setName] = useState('');
@@ -46,40 +48,44 @@ const AddDrink = () => {
   };
 
   return (
-    <div className="container">
-      <h2>Add New Drink</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name: </label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          {errors.name && <div className="error">{errors.name}</div>}
-        </div>
-        <div>
-          <label>Description: </label>
-          <input
-            type="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          {errors.description && <div className="error">{errors.description}</div>}
-        </div>
-        <div>
-          <label>Price: </label>
-          <input
-            type="number"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-          {errors.price && <div className="error">{errors.price}</div>}
-        </div>
-        {errors.general && <div className="error">{errors.general}</div>}
-        <button type="submit">Add Drink</button>
-      </form>
-    </div>
+    <>
+      <div><Header/></div>
+      <div className="container">
+        <h2>Add New Drink</h2>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Name: </label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+           />
+            {errors.name && <div className="error">{errors.name}</div>}
+          </div>
+          <div>
+           <label>Description: </label>
+           <input
+             type="text"
+             value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+           {errors.description && <div className="error">{errors.description}</div>}
+          </div>
+         <div>
+           <label>Price: </label>
+           <input
+              type="number"
+              value={price}
+             onChange={(e) => setPrice(e.target.value)}
+            />
+            {errors.price && <div className="error">{errors.price}</div>}
+          </div>
+          {errors.general && <div className="error">{errors.general}</div>}
+          <button type="submit">Add Drink</button>
+        </form>
+      </div>
+      <div><Footer/></div>
+    </>
   );
 };
 
